@@ -20,6 +20,7 @@ function serve() {
 
     watch('assets/sass/**/*.scss', generateCSS);
     // watch(['assets/js/**/*.js', 'assets/js/**/*.jsx'], generateJS);
+    watch('public/**/*.js').on('change', browserSync.reload);
     watch('public/**/*.html').on('change', browserSync.reload);
 }
 
