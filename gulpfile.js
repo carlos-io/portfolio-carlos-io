@@ -18,14 +18,14 @@ function serve() {
         open: false
     });
 
-    watch('public/assets/sass/**/*.scss', generateCSS);
+    watch('assets/sass/**/*.scss', generateCSS);
     // watch(['assets/js/**/*.js', 'assets/js/**/*.jsx'], generateJS);
     watch('public/**/*.html').on('change', browserSync.reload);
 }
 
 
 function generateCSS() {
-    return src('public/assets/sass/**/*.scss')
+    return src('assets/sass/**/*.scss')
         .pipe(sourcemaps.init({ largeFile: true }))
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer(), cssnano() ]))
