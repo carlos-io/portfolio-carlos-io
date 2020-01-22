@@ -46,7 +46,7 @@ $window.on("load", (function() {
 function pagePilling(){
     $('#pagepiling').pagepiling({
         sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff','#fff', '#fff' ,'#fff' ,'#fff'],
-        anchors: ['hero', 'about', 'resume', 'services', 'portfolio', 'testimonial', 'blog'],
+        anchors: ['hero', 'about', 'resume', 'services', 'portfolio', 'testimonial', 'blog', 'contact', 'footer'],
         menu: '#myMenu',
         direction: 'vertical',
         verticalCentered: true,
