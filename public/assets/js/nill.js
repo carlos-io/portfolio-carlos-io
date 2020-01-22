@@ -54,8 +54,8 @@ function pagePilling(){
             'position': 'right',
             'tooltips': ['HOME', 'ABOUT ME', 'RESUME', 'SERVICES', 'PORTFOLIO', 'CLIENT', 'BLOG', 'CONTACT', 'FOOTER']
         },
-        loopBottom: true,
-        loopTop: true,
+        loopBottom: false,
+        loopTop: false,
         scrollingSpeed: 700,
         easing: 'swing',
         css3: true,
