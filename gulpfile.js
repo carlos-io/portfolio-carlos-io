@@ -18,6 +18,7 @@ function serve() {
         open: false
     });
 
+    watch('assets/img/**/*', generateIMG);
     watch('assets/sass/**/*.scss', generateCSS);
     // watch(['assets/js/**/*.js', 'assets/js/**/*.jsx'], generateJS);
     watch('public/**/*.js').on('change', browserSync.reload);
