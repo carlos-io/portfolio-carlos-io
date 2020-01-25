@@ -101,3 +101,11 @@ header {
         }
     }
 }
+
+@media (min-width: 900px) {
+    .services {
+        .services-item {
+            min-height: 120px;
+        }
+    }
+}
