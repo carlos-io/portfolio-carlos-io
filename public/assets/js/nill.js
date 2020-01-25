@@ -33,7 +33,7 @@ $(document).ready(function () {
 $window.on("load", (function() {
     $("#overlayer").delay(500).fadeOut('slow');
     $(".loader").delay(1000).fadeOut('slow');
-    pagePilling();
+    // pagePilling();
 }));
 
 /*-----------------------------------------------------------------------------
@@ -135,6 +135,7 @@ function typedJS() {
 
     var options = {
         strings: $(".element").attr('data-elements').split(','),
+        // startDelay: 2300,
         typeSpeed: 100,
         backDelay: 3000,
         backSpeed: 50,

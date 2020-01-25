@@ -65,6 +65,7 @@ header {
 }
 
 .title-small {
+    display: none;  // hide for now
     position: absolute;
     top: calc(50% - 12px);
     width: 280px;

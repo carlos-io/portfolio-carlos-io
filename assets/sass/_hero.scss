@@ -24,8 +24,28 @@
     }
     .social-icon{
         .list-inline-item {
+            svg{
+                width: 1.2rem;
+                height: 1.2rem;
+                vertical-align: top;
+                position: relative;
+                top: 1px;
+                g {
+                    path, polygon {
+                        fill: #343a40;
+                    }
+                }
+                &:hover {
+                    g {
+                        path, polygon {
+                            fill: $base-color;
+                        }
+                    }
+                }
+            }
             i{
                 font-size: 1.2rem;
+                vertical-align: top;
                 &:hover{
                     color: $base-color !important;
                 }
