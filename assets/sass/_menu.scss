@@ -36,6 +36,16 @@
                 font-family: 'Poppins', sans-serif;
                 font-weight: $f-w-500;
             }
+            svg {
+                 g path, g polygon {
+                    fill: $dbdbdb;
+                }
+                &:hover {
+                    g path, g polygon {
+                        fill: $base-color;
+                    }
+                }
+            }
             .contact-info {
                 li:first-child span{
                     font-size: $f-s-16;
@@ -50,6 +60,12 @@
                 .socails li i {
                     font-size: 20px;
                     font-weight: 400;
+                }
+                .socails li svg {
+                    height: 20px;
+                    width: 20px;
+                    position: relative;
+                    top: -4px;
                 }
             }
         }
