@@ -23,7 +23,7 @@ $(document).ready(function () {
     countup();
     portfolioIsotop();
     portfolioPopup();
-    mapInit();
+    // mapInit();
     validateEmail();
     sendEmail();
     $('.owl-item.active .hero-slide').addClass('zoom');
