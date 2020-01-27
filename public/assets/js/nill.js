@@ -43,7 +43,7 @@ $window.on("load", (function() {
 /*-------------------------
        Page Pilling
 -------------------------*/
-function pagePilling(){
+/* function pagePilling(){
     $('#pagepiling').pagepiling({
         sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff','#fff', '#fff' ,'#fff' ,'#fff'],
         anchors: ['hero', 'about', 'resume', 'services', 'portfolio', 'testimonial', 'blog', 'contact', 'footer'],
@@ -70,7 +70,7 @@ function pagePilling(){
         afterRender: function() {},
         afterLoad: function(anchorLink, index) {}
     });
-}
+} */
 
 
 /*-------------------------
@@ -241,7 +241,7 @@ function portfolioIsotop() {
 /*-------------------------
     Testimonial CAROUSEL JS
 -------------------------*/
-$(".testimonial .owl-carousel").owlCarousel({
+/* $(".testimonial .owl-carousel").owlCarousel({
     loop:true,
     stagePadding:5,
     margin: 10,
@@ -267,12 +267,12 @@ $(".testimonial .owl-carousel").owlCarousel({
         },
 
     }
-});
+}); */
 
 /*-------------------------
           GOOGLE Map
   -------------------------*/
-function mapInit() {
+/* function mapInit() {
 
     "use strict";
     if($('#my-map').length){
@@ -413,7 +413,7 @@ function mapInit() {
         });
         marker1.setMap(map);
     }
-}
+} */
 /*-------------------------
      AJAX CONTACT FORM
 -------------------------*/
