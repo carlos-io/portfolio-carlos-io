@@ -102,6 +102,12 @@ header {
     }
 }
 
+.portfolio-icon {
+    button {
+        padding: 0;
+    }
+}
+
 @media (min-width: 900px) {
     .services {
         .services-item {
