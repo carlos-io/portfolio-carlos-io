@@ -3,13 +3,14 @@ const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
+// const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
 const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 const cssnano = require('cssnano');
-const named = require('vinyl-named');
-const compiler = require('webpack');
-const webpack = require('webpack-stream');
+// const named = require('vinyl-named');
+// const compiler = require('webpack');
+// const webpack = require('webpack-stream');
 
 function serve() {
     browserSync.init({
@@ -19,32 +20,32 @@ function serve() {
     });
 
     watch('assets/img/**/*', generateIMG);
-    watch('assets/sass/**/*.scss', generateCSS);
-    // watch(['assets/js/**/*.js', 'assets/js/**/*.jsx'], generateJS);
-    watch('public/**/*.js').on('change', browserSync.reload);
+    watch(['assets/sass/**/*.scss', 'assets/css/**/*.css'], generateCSS);
+    watch('assets/js/**/*.js', generateJS);
     watch('public/**/*.html').on('change', browserSync.reload);
 }
 
 
 function generateCSS() {
     return src('assets/sass/**/*.scss')
-        .pipe(sourcemaps.init({ largeFile: true }))
+        // .pipe(sourcemaps.init({ largeFile: true }))
         .pipe(sass().on('error', sass.logError))
+        .pipe(src('assets/css/**/*.css'))
         .pipe(postcss([ autoprefixer(), cssnano() ]))
         // .pipe(rename({ extname: '.min.css' }))
-        .pipe(sourcemaps.write('.'))
+        // .pipe(sourcemaps.write('.'))
         .pipe(dest('public/assets/css/'))
         .pipe(browserSync.stream());
 }
 
 
-/* function generateJS() {
-    return src(['assets/js/*.js', 'assets/js/*.jsx'])
-        .pipe(named())
+function generateJS() {
+    return src('assets/js/*.js')
+        /* .pipe(named())
         .pipe(webpack({
             output: { filename: '[name].bundle.js' },
             mode: 'production',
-            devtool: 'source-map',
+            // devtool: 'source-map',
             module: {
                 rules: [{
                     use: {
@@ -55,10 +56,11 @@ function generateCSS() {
                     }
                 }]
              }
-        }, compiler))
-        .pipe(dest('public/js/'))
+        }, compiler)) */
+        .pipe(uglify())
+        .pipe(dest('public/assets/js/'))
         .pipe(browserSync.stream());
-} */
+}
 
 
 function generateIMG() {
@@ -71,6 +73,6 @@ function generateIMG() {
 exports.watch = exports.serve = serve;
 exports.default = series(parallel(
     generateCSS,
-    // generateJS,
+    generateJS,
     generateIMG
 ))
