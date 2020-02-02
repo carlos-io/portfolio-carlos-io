@@ -110,6 +110,10 @@ header {
 
 .portfolio-item {
     height: 240px;
+
+    .portfolio-item-content {
+        border: 2px solid rgba($color: #000000, $alpha: 0.09);
+    }
 }
 
 @media (min-width: 900px) {
