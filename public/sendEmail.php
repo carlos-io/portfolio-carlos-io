@@ -5,7 +5,7 @@ if ($_POST) {
     $email = "";
     $subject = "";
     $comments = "";
-    $recipient="carlosjvelazquez@gmail.com"; // Your email comes here
+    $recipient="contact@carlos.io"; // Your email comes here
 
     if (isset($_POST['name'])) {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
@@ -17,7 +17,7 @@ if ($_POST) {
     }
 
     if (isset($_POST['subject'])) {
-        $subject = "Carlos.io Submission - " . filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+        $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
     }
 
     if (isset($_POST['comments'])) {
