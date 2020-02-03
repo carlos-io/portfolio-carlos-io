@@ -4,6 +4,16 @@
           HERO
 -------------------------*/
 .hero {
+    .hero-content {
+        .element::first-letter {
+            color: $base-color;
+        }
+        p {
+            a {
+                color: $base-color;
+            }
+        }
+    }
     .personal-item{
         h1{
             font-size: 2rem !important;
