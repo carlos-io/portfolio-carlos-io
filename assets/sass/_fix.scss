@@ -3,6 +3,10 @@
 /*-------------------------
         FIX
 -------------------------*/
+p {
+    // letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
 header {
   padding: 15px;
   width: 100%;
@@ -10,6 +14,21 @@ header {
   position: fixed;
   z-index: 1030;
   top: 0;
+}
+.logo {
+    margin-bottom: 30px;
+    position: relative;
+    left: -5px;
+    img {
+        height: 30px;
+    }
+    span {
+        vertical-align: bottom;
+        position: relative;
+        top: 8px;
+        left: -3px;
+        font-size: 33px;
+    }
 }
 #pp-nav{
     li{
@@ -117,6 +136,16 @@ header {
 }
 
 @media (min-width: 900px) {
+    .logo {
+        img {
+            height: 40px;
+        }
+        span {
+            font-size: 45px;
+            top: 14px;
+            left: -4px;
+        }
+    }
     .services {
         .services-item {
             min-height: 120px;
