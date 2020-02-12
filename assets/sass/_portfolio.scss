@@ -104,7 +104,21 @@
 .portfolio-single .modal-dialog {
     max-width: 75%;
     -webkit-overflow-scrolling: touch;
+
+    .container {
+        a {
+            color: $base-color;
+        }
+        a:hover {
+            color: $white;
+        }
+    }
 }
 .max-width-450 {
     max-width: 450px;
-    margin: 0 auto; }
+    margin: 0 auto;
+}
+.max-width-650 {
+    max-width: 650px;
+    margin: 0 auto;
+}
