@@ -31,16 +31,14 @@
         }
     }
     #message.toast {
-        max-width: 500px;
+        max-width: 320px;
         padding: 2px 0 1px;
         position: relative;
         top: $f-s-18;
-        display: inline-block;
-        left: 20px;
+        display: block;
     }
     .toast button span {
-        position: relative;
-        top: 8px;
+        display: none;
     }
 }
 /*-------------------------
