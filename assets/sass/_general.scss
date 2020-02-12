@@ -36,6 +36,10 @@ body{
     // font-family: $muli;
     font-family: $roboto;
 }
+p {
+    // letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
 ::selection {
     background: $p-bg;
 }

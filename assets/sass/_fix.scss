@@ -3,10 +3,6 @@
 /*-------------------------
         FIX
 -------------------------*/
-p {
-    // letter-spacing: 0.5px;
-    word-spacing: 1px;
-}
 header {
   padding: 15px;
   width: 100%;
@@ -29,6 +25,9 @@ header {
         left: -3px;
         font-size: 33px;
     }
+}
+.lni-menu {
+    transform: scaleX(0.75);
 }
 #pp-nav{
     li{
