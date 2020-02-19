@@ -12,10 +12,10 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
-        <meta name="description" content="Need a website? I can build you one. Click here for more details">
+        <meta name="description" content="Need a website? I can build you one.">
         <meta name="keywords" content="web,frontend,backend,design,development,developer,html,css,html5,email,wordpress">
         <meta name="author" content="Carlos Velazquez">
-        <title>Carlos.io - Web Developer</title>
+        <title>Carlos Velazquez - Web Developer</title>
 
         <!--  FavIcon  -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
