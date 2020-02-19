@@ -452,7 +452,7 @@ function sendEmail() {
         $.ajax({
             type: 'POST',
             data: $("#contactForm").serialize(),
-            url:  "sendEmail.php",
+            url:  "/sendEmail.php",
             beforeSend: function() {
                 $('#submit-btn').html('<span class="spinner-border spinner-border-sm"></span> Loading..');
             },

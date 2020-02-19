@@ -31,17 +31,17 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:500,600,700" rel="stylesheet">
 
         <!--  bootstrap Css  -->
-        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/bootstrap.css">
         <!--  pagepiling Css  -->
-       <!--  <link rel="stylesheet" type="text/css" href="assets/css/jquery.pagepiling.css" /> -->
+       <!--  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/jquery.pagepiling.css" /> -->
         <!--  LineIcon Css  -->
-        <link rel="stylesheet" href="assets/css/LineIcons.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/LineIcons.css">
         <!--  MagnificPopup Css  -->
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/magnific-popup.css">
         <!--  OwlCarousel Css  -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/owl.carousel.min.css">
         <!--  Custom Style CSS  -->
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/style.css">
 
     </head>
     <body class="pilling-page nill-dark"  data-spy="scroll" data-target="#scrollspy" data-offset="1">
@@ -180,7 +180,7 @@
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://carlos.io/portfolio/real-estate">Real Estate</a></p>
+                                                        <p class="text-muted mb-0"><a href="/portfolio/real-estate">Real Estate</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,7 +203,7 @@
                                         </div>
                                         <div class="mt-5">
                                             <div class="portfolio-single-item">
-                                                <img src="/assets/img/real-estate-large.jpg" class="d-block w-100 rounded" alt="...">
+                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-large.jpg" class="d-block w-100 rounded" alt="...">
                                             </div>
                                         </div>
                                         <div class="text-md-left mt-5">
@@ -267,7 +267,7 @@
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://carlos.io/portfolio/inventory-management">IMS</a></p>
+                                                        <p class="text-muted mb-0"><a href="/portfolio/inventory-management">IMS</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -290,7 +290,7 @@
                                         </div>
                                         <div class="mt-5">
                                             <div class="portfolio-single-item">
-                                                <img src="/assets/img/inventory-management-large.jpg" class="d-block w-100 rounded" alt="...">
+                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-large.jpg" class="d-block w-100 rounded" alt="...">
                                             </div>
                                         </div>
                                         <div class="text-md-left mt-5">
@@ -351,7 +351,7 @@
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://carlos.io/portfolio/car-rental">Car Rental</a></p>
+                                                        <p class="text-muted mb-0"><a href="/portfolio/car-rental">Car Rental</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -374,7 +374,7 @@
                                         </div>
                                         <div class="mt-5">
                                             <div class="portfolio-single-item">
-                                                <img src="/assets/img/car-rental-large.jpg" class="d-block w-100 rounded" alt="...">
+                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-large.jpg" class="d-block w-100 rounded" alt="...">
                                             </div>
                                         </div>
                                         <div class="text-md-left mt-5">
@@ -396,8 +396,8 @@
              <!--   Header Start -->
              <header>
                  <div class="logo-area">
-                     <a href="#" class="logo">
-                       <img src="/assets/img/logo.png" alt="" class="size-sm mb-0 pl-3 text-left">
+                     <a href="/" class="logo">
+                       <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/logo.png" alt="" class="size-sm mb-0 pl-3 text-left">
                        <span class="size-sm mb-0 font-weight-bold pl-3 text-dark text-left"></span>
                      </a>
                  </div>
@@ -415,7 +415,7 @@
                          <div class="row">
                              <div class="col-lg-8 offset-lg-2 overlay-nav">
                                  <ul class="list-group text-left" id="myMenu">
-                                     <li data-menuanchor="hero" class="list-group-item"><a href="#hero">Home</a></li>
+                                     <li data-menuanchor="hero" class="list-group-item"><a href="/">Home</a></li>
                                      <li data-menuanchor="about" class="list-group-item"><a href="#about">About me</a></li>
                                      <li data-menuanchor="services" class="list-group-item"><a href="#services">Services</a></li>
                                      <li data-menuanchor="portfolio" class="list-group-item"><a href="#portfolio">Portfolio</a></li>
@@ -478,6 +478,16 @@
 
             <!--    Hero Start    -->
             <section class="section pp-scrollable hero hero-01 bg-dark" id="hero">
+                <style>
+                    .hero-01 {
+                        background: -moz-linear-gradient(top,  rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 100%),
+                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
+                        background: -webkit-linear-gradient(top,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
+                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
+                        background: linear-gradient(to bottom,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
+                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
+                    }
+                </style>
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -554,7 +564,7 @@
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-12 col-lg-4 text-center">
-                                <img src="/assets/img/0.jpg" alt="/" class="rounded img-thumbnail">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/0.jpg" alt="/" class="rounded img-thumbnail">
                             </div>
                             <div class="col-sm-12 col-lg-8 personal-item  mb-4 mb-lg-0">
                                 <h2 class="text-dark mb-2">About <span class="base-color">Me</span></h2>
@@ -864,14 +874,14 @@
                             <!-- Item 01 -->
                             <div class="col-lg-4 portfolio-item my-3 development frontend html sass javascript">
                                 <div class="portfolio-item-content rounded">
-                                    <img src="/assets/img/real-estate-thumb.jpg" alt="/">
+                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-thumb.jpg" alt="/">
                                     <div class="img-overlay text-center">
                                         <div class="img-overlay-content">
                                             <div class="portfolio-icon">
                                                 <button type="button" data-toggle="modal" data-target="#portfolio-real-estate">
                                                     <i class="lni-link"></i>
                                                 </button>
-                                                <a href="/assets/img/real-estate-thumb.jpg" class="js-zoom-gallery">
+                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-thumb.jpg" class="js-zoom-gallery">
                                                     <i class="lni-search"></i>
                                                 </a>
                                             </div>
@@ -883,14 +893,14 @@
                             <!-- Item 02 -->
                             <div class="col-lg-4 portfolio-item my-3 development frontend backend html sass bootstrap adonis database javascript jquery">
                                 <div class="portfolio-item-content rounded">
-                                    <img src="/assets/img/inventory-management-thumb.jpg" alt="/">
+                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-thumb.jpg" alt="/">
                                     <div class="img-overlay text-center">
                                         <div class="img-overlay-content">
                                             <div class="portfolio-icon">
                                                 <button type="button" data-toggle="modal" data-target="#portfolio-inventory-management">
                                                     <i class="lni-link"></i>
                                                 </button>
-                                                <a href="/assets/img/inventory-management-thumb.jpg" class="js-zoom-gallery">
+                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-thumb.jpg" class="js-zoom-gallery">
                                                     <i class="lni-search"></i>
                                                 </a>
                                             </div>
@@ -902,14 +912,14 @@
                             <!-- Item 03 -->
                             <div class="col-lg-4 portfolio-item my-3 development frontend sass javascript react">
                                 <div class="portfolio-item-content rounded">
-                                    <img src="/assets/img/car-rental-thumb.jpg" alt="/">
+                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-thumb.jpg" alt="/">
                                     <div class="img-overlay text-center">
                                         <div class="img-overlay-content">
                                             <div class="portfolio-icon">
                                                 <button type="button" data-toggle="modal" data-target="#portfolio-car-rental">
                                                     <i class="lni-link"></i>
                                                 </button>
-                                                <a href="/assets/img/car-rental-thumb.jpg" class="js-zoom-gallery">
+                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-thumb.jpg" class="js-zoom-gallery">
                                                     <i class="lni-search"></i>
                                                 </a>
                                             </div>
@@ -1276,7 +1286,7 @@
                              <p class="text-dark">Footer</p>
                          </div>
                          <div class="text-center m-auto">
-                             <p class="text-dark size-sm logo" style="position: relative; left: -5px;"><img src="assets/img/logo.png"><span>arlos.io</span></p>
+                             <p class="text-dark size-sm logo" style="position: relative; left: -5px;"><img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/logo.png"><span>arlos.io</span></p>
                              <ul class="list-inline socails">
                                  <!-- <li class="list-inline-item"><a class="text-white" href="#"><i class="lni-facebook-filled text-dark mr-2"></i></a></li>
                                  <li class="list-inline-item"><a class="text-white" href="#"><i class="lni-twitter-filled text-dark mr-2"></i></a></li> -->
@@ -1332,24 +1342,24 @@
 
 
         <!--  JavaScripts  -->
-        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery-3.4.1.min.js"></script>
         <!--   Page Pilling Js     -->
-        <!-- <script src="assets/js/jquery.pagepiling.js"></script> -->
+        <!-- <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.pagepiling.js"></script> -->
         <!--  Bootstrap Js  -->
-        <script src="assets/js/bootstrap.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/bootstrap.js"></script>
         <!--  Typed Js  -->
-        <script src="assets/js/typed.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/typed.js"></script>
         <!--  Count Js  -->
-        <script src="assets/js/jquery.countTo.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.countTo.js"></script>
         <!--  Isotope Js  -->
-        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/isotope.pkgd.min.js"></script>
         <!--  Pop UP JS  -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.magnific-popup.min.js"></script>
         <!--  Owl carousel Js  -->
-        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/owl.carousel.min.js"></script>
         <!-- Map Js -->
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcmB207_E3E4SkA8jTA8FQjSWTop9YxZU"></script> -->
         <!--  Custom JS  -->
-        <script src="assets/js/nill.js"></script>
+        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/nill.js"></script>
     </body>
 </html>
