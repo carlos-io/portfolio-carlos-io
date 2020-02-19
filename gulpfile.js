@@ -12,35 +12,37 @@ const cssnano = require('cssnano');
 // const compiler = require('webpack');
 // const webpack = require('webpack-stream');
 
+const basePath = "public/wp-content/themes/nill";
+
 function serve() {
     browserSync.init({
-        server: { baseDir: './public' },
+        server: { baseDir: `${basePath}/public` },
         notify: false,
         open: false
     });
 
-    watch('assets/img/**/*', generateIMG);
-    watch(['assets/sass/**/*.scss', 'assets/css/**/*.css'], generateCSS);
-    watch('assets/js/**/*.js', generateJS);
-    watch('public/**/*.html').on('change', browserSync.reload);
+    watch(`${basePath}/assets/img/**/*`, generateIMG);
+    watch([`${basePath}/assets/sass/**/*.scss`, `${basePath}/assets/css/**/*.css`], generateCSS);
+    watch(`${basePath}/assets/js/**/*.js`, generateJS);
+    watch(`${basePath}/public/**/*.php`).on('change', browserSync.reload);
 }
 
 
 function generateCSS() {
-    return src('assets/sass/**/*.scss')
+    return src(`${basePath}/assets/sass/**/*.scss`)
         // .pipe(sourcemaps.init({ largeFile: true }))
         .pipe(sass().on('error', sass.logError))
-        .pipe(src('assets/css/**/*.css'))
+        .pipe(src(`${basePath}/assets/css/**/*.css`))
         .pipe(postcss([ autoprefixer(), cssnano() ]))
         // .pipe(rename({ extname: '.min.css' }))
         // .pipe(sourcemaps.write('.'))
-        .pipe(dest('public/assets/css/'))
+        .pipe(dest(`${basePath}/public/assets/css/`))
         .pipe(browserSync.stream());
 }
 
 
 function generateJS() {
-    return src('assets/js/*.js')
+    return src(`${basePath}/assets/js/*.js`)
         /* .pipe(named())
         .pipe(webpack({
             output: { filename: '[name].bundle.js' },
@@ -58,15 +60,15 @@ function generateJS() {
              }
         }, compiler)) */
         .pipe(uglify())
-        .pipe(dest('public/assets/js/'))
+        .pipe(dest(`${basePath}/public/assets/js/`))
         .pipe(browserSync.stream());
 }
 
 
 function generateIMG() {
-    return src('assets/img/**/*')
+    return src(`${basePath}/assets/img/**/*`)
         .pipe(imagemin({ verbose: true }))
-        .pipe(dest('public/assets/img/'));
+        .pipe(dest(`${basePath}/public/assets/img/`));
 }
 
 
