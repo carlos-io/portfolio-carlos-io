@@ -3,3 +3,7 @@ private/
 public/wp-content/themes/nill/public/assets/css/
 public/wp-content/themes/nill/public/assets/img/
 public/wp-content/themes/nill/public/assets/js/
+
+.htaccess
+wp-config.php
+plugins/
