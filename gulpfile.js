@@ -6,7 +6,6 @@ const sass = require('gulp-sass');
 // const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
 const cssnano = require('cssnano');
 // const named = require('vinyl-named');
 // const compiler = require('webpack');
@@ -15,16 +14,9 @@ const cssnano = require('cssnano');
 const basePath = "public/wp-content/themes/nill";
 
 function serve() {
-    browserSync.init({
-        server: { baseDir: `${basePath}/public` },
-        notify: false,
-        open: false
-    });
-
     watch(`${basePath}/assets/img/**/*`, generateIMG);
     watch([`${basePath}/assets/sass/**/*.scss`, `${basePath}/assets/css/**/*.css`], generateCSS);
     watch(`${basePath}/assets/js/**/*.js`, generateJS);
-    watch(`${basePath}/public/**/*.php`).on('change', browserSync.reload);
 }
 
 
