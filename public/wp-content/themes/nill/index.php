@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <body class="pilling-page nill-dark"  data-spy="scroll" data-target="#scrollspy" data-offset="1">
+    <body <?php body_class('pilling-page nill-dark'); ?> data-spy="scroll" data-target="#scrollspy" data-offset="1">
 
         <!--  Pre Loader  -->
         <div id="overlayer">
