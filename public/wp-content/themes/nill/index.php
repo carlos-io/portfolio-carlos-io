@@ -693,101 +693,46 @@
              </section> -->
              <!--   Resume End   -->
 
-             <!--   Services Start   -->
-             <section id="services" class="section pp-scrollable services bg-dark">
-                 <div class="display-table">
-                     <div class="display-content">
+            <!--   Services Start   -->
+             <?php
+                $service = pods('service');
+                $service->find('weight ASC');
+             ?>
+            <section id="services" class="section pp-scrollable services bg-dark">
+                <div class="display-table">
+                    <div class="display-content">
                         <div class="container">
-                         <div class="row">
-                             <div class="title-small">
-                                 <p class="text-dark">My Services</p>
-                             </div>
-                             <div class="col-lg-12">
-                                 <div class="text-left">
-                                     <h2 class="text-dark mb-3">My <span class="base-color">Services</span></h2>
-                                     <!-- <p class="text-muted">Services I Offer To My Clients</p> -->
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="row mt-4">
-                             <!-- Item 01 -->
-                             <div class="col-lg-4 text-left">
-                                 <div class="services-item">
-                                     <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                         <i class="lni-layout size-md base-color"></i>
-                                     </div>
-                                     <div class="services-content">
-                                         <h5>Web Design</h5>
-                                         <p class="text-muted mt-3 mb-0">layout, colors and fonts</p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <!-- Item 02 -->
-                             <div class="col-lg-4 text-left">
-                                 <div class="services-item">
-                                     <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                         <i class="lni-code size-md base-color"></i>
-                                     </div>
-                                     <div class="services-content">
-                                         <h5>Web Development</h5>
-                                         <p class="text-muted mt-3 mb-0">code, logic and interaction</p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <!-- Item 03-->
-                             <div class="col-lg-4 text-left">
-                                <div class="services-item">
-                                    <div class="float-left mt-lg-1  d-inline-block services-icon">
-                                        <i class="lni-cloud size-md base-color"></i>
-                                    </div>
-                                    <div class="services-content">
-                                        <h5>Hosting Setup</h5>
-                                        <p class="text-muted mt-3 mb-0">databases, files and SSL certs</p>
+                            <div class="row">
+                                <div class="title-small">
+                                    <p class="text-dark">My Services</p>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="text-left">
+                                        <h2 class="text-dark mb-3">My <span class="base-color">Services</span></h2>
+                                        <!-- <p class="text-muted">Services I Offer To My Clients</p> -->
                                     </div>
                                 </div>
                             </div>
-                             <!-- Item 04 -->
-                             <div class="col-lg-4 text-left">
-                                <div class="services-item">
-                                    <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                        <i class="lni-brush-alt size-md base-color"></i>
-                                    </div>
-                                    <div class="services-content">
-                                        <h5>Graphic Design</h5>
-                                        <p class="text-muted mt-3 mb-0">images and logos</p>
-                                    </div>
-                                </div>
-                            </div>
-                             <!-- Item 05 -->
-                             <div class="col-lg-4 text-left">
-                                <div class="services-item">
-                                    <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                        <i class="lni-envelope size-md base-color"></i>
-                                    </div>
-                                    <div class="services-content">
-                                        <h5>Email Development</h5>
-                                        <p class="text-muted mt-3 mb-0">newsletters and promotions</p>
+                            <div class="row mt-4">
+                            <?php while ( $service->fetch() ): ?>
+                                <div class="col-lg-4 text-left">
+                                    <div class="services-item">
+                                        <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                            <i class="<?php echo $service->field('icon_class'); ?> size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5><?php echo $service->field('name'); ?></h5>
+                                            <p class="text-muted mt-3 mb-0"><?php echo $service->field('content'); ?></p>
+                                        </div>
                                     </div>
                                 </div>
+                            <?php endwhile; ?>
                             </div>
-                             <!-- Item 06 -->
-                             <!-- <div class="col-lg-4 text-left">
-                                 <div class="services-item">
-                                     <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                         <i class="lni-search size-md base-color mb-0"></i>
-                                     </div>
-                                     <div class="services-content">
-                                         <h5>SEO</h5>
-                                         <p class="text-muted mt-3 mb-0">search engine ranking</p>
-                                     </div>
-                                 </div>
-                             </div> -->
-                         </div>
-                     </div>
-                     </div>
-                 </div>
-             </section>
-             <!--   Services End   -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--   Services End   -->
 
             <!--  Portfolio Start  -->
             <section id="portfolio" class="section pp-scrollable portfolio bg-dark">
