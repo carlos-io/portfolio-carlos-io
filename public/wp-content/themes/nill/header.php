@@ -43,4 +43,5 @@
         <!--  Custom Style CSS  -->
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/style.css">
 
+        <?php wp_head(); ?>
     </head>

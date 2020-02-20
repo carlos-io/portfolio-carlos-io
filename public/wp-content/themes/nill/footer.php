@@ -81,5 +81,15 @@
         <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcmB207_E3E4SkA8jTA8FQjSWTop9YxZU"></script> -->
         <!--  Custom JS  -->
         <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/nill.js"></script>
+
+        <?php wp_footer(); ?>
+        <?php if ( is_admin_bar_showing() ): ?>
+            <style>
+                .logo-area, .lni-menu { margin-top: 32px; }
+                @media (max-width: 782px) {
+                    .logo-area, .lni-menu { margin-top: 50px; }
+                }
+            </style>
+        <?php endif; ?>
     </body>
 </html>
