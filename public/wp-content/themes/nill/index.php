@@ -94,25 +94,6 @@
         <?php
             $portfolio_entry = pods('portfolio_entry');
             $portfolio_entry->find('weight ASC');
-
-            if ( ! function_exists('get_post_featured_image') ) {
-                function get_post_featured_image($post_id, $size) {
-                    $image_properties = [];
-                    $image_id = get_post_thumbnail_id($post_id);
-                    $image = wp_get_attachment_image_src($image_id, $size);
-                    $image_url = $image[0];
-                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-                    $image_post = get_post($image_id);
-                    $image_caption = $image_post->post_excerpt;
-                    $image_description = $image_post->post_content;
-                    $image_properties['id'] = $image_id;
-                    $image_properties['url'] = $image_url;
-                    $image_properties['alt'] = $image_alt;
-                    $image_properties['caption'] = $image_caption;
-                    $image_properties['description'] = $image_description;
-                    return $image_properties;
-                }
-            }
         ?>
 
         <?php while ( $portfolio_entry->fetch() ): ?>
