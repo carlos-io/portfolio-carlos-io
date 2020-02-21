@@ -112,8 +112,8 @@
                                 <div class="row">
                                     <div class="col-12 col-md-10 offset-md-1">
                                         <div class="text-center">
-                                        <?php foreach ( explode( "\n", $portfolio_entry->field('content') ) as $sentence ): ?>
-                                            <p class="text-muted mb-3 text-left max-width-650"><?php echo $sentence; ?></p>
+                                        <?php foreach ( explode( "\n", $portfolio_entry->field('content') ) as $paragraph ): ?>
+                                            <p class="text-muted mb-3 text-left max-width-650"><?php echo $paragraph; ?></p>
                                         <?php endforeach; ?>
                                         </div>
                                         <div class="row contact-info mt-5">
