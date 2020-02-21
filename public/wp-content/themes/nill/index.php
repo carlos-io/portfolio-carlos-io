@@ -91,181 +91,36 @@
         </div> -->
 
         <!-- Portfolio Single Modal -->
-        <div class="portfolio-single modal fade" id="portfolio-real-estate" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                <div class="modal-content bg-white">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="portfolioModalScrollable">Real Estate</h5>
-                        <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pt-4 pb-5">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-10 offset-md-1">
-                                        <div class="text-center">
-                                            <!-- <h2 class="text-dark mb-3">Real Estate<span class="base-color"></span></h2> -->
-                                            <p class="text-muted mb-3 text-left max-width-650">This is an example of converting a PDF design to a live website.</p>
-                                            <p class="text-muted mb-3 text-left max-width-650">
-                                                I focused on reproducing the layout of the site, font and images as closely as possible.&nbsp;
-                                                Because of the site&rsquo;s complex layout and the fact that I didn&rsquo;t have the mobile design layout,
-                                                I improvised and made the site fit well onto whatever screen it&rsquo;s viewed on.</p>
-                                            <p class="text-muted text-left max-width-650">This site was developed from scratch with just basic technologies.</p>
-                                        </div>
-                                        <div class="row contact-info mt-5">
-                                            <!-- <div class="col-md-4">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Created by:</h6>
-                                                        <p class="text-muted mb-0">John Doe</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 p-title-border mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6 class="contact_detail-title">Completed on:</h6>
-                                                        <p class="text-muted mb-0">September 30, 2019</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="/portfolio/real-estate">Real Estate</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Website Code:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://github.com/carlos-io/portfolio-real-estate">Github</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Made with:</h6>
-                                                        <p class="text-muted mb-0">HTML5 / SCSS</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-5">
-                                            <div class="portfolio-single-item">
-                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-large.jpg" class="d-block w-100 rounded" alt="...">
-                                            </div>
-                                        </div>
-                                        <div class="text-md-left mt-5">
-                                            <p class="my-3 text-muted"></p>
-                                            <!-- <p class="mt-3 mb-0 text-muted"></p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
+            $portfolio_entry = pods('portfolio_entry');
+            $portfolio_entry->find('weight ASC');
 
-        <div class="portfolio-single modal fade" id="portfolio-inventory-management" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                <div class="modal-content bg-white">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="portfolioModalScrollable">Inventory Management</h5>
-                        <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pt-4 pb-5">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-10 offset-md-1">
-                                        <div class="text-center">
-                                            <!-- <h2 class="text-dark mb-3">Inventory Management System<span class="base-color"></span></h2> -->
-                                            <p class="text-muted mb-3 text-left max-width-650">This example site tracks the quantity of products and the orders placed against them.</p>
-                                            <p class="text-muted mb-3 text-left max-width-650">
-                                                From the left menu you can access the different sections which allow adding, editing, or deleting items.&nbsp;
-                                                Each section feeds into the others so that first you add a category, like Sunglasses, then a brand, like Ray-Ban, tying to the Sunglasses category.
-                                            </p>
-                                            <p class="text-muted mb-3 text-left max-width-650">
-                                                The same is true going further, when adding a product which is tied to both a category and a brand.&nbsp;
-                                                Orders tie these pieces of data together along with customer info such as name, address, payment method, paid amount and products ordered.&nbsp;
-                                                And finally, the dashboard shows an overview of sales metrics in easy to read graphs.
-                                            </p>
-                                        </div>
-                                        <div class="row contact-info mt-5">
-                                            <!-- <div class="col-md-4">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Created by:</h6>
-                                                        <p class="text-muted mb-0">John Doe</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 p-title-border mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6 class="contact_detail-title">Completed on:</h6>
-                                                        <p class="text-muted mb-0">September 30, 2019</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="/portfolio/inventory-management">IMS</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Website Code:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://github.com/carlos-io/portfolio-inventory-management">Github</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Made with:</h6>
-                                                        <p class="text-muted mb-0">AdonisJS / SRTDashboard / jQuery / MySQL</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mt-5">
-                                            <div class="portfolio-single-item">
-                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-large.jpg" class="d-block w-100 rounded" alt="...">
-                                            </div>
-                                        </div>
-                                        <div class="text-md-left mt-5">
-                                            <p class="my-3 text-muted"></p>
-                                            <!-- <p class="mt-3 mb-0 text-muted"></p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            if ( ! function_exists('get_post_featured_image') ) {
+                function get_post_featured_image($post_id, $size) {
+                    $image_properties = [];
+                    $image_id = get_post_thumbnail_id($post_id);
+                    $image = wp_get_attachment_image_src($image_id, $size);
+                    $image_url = $image[0];
+                    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                    $image_post = get_post($image_id);
+                    $image_caption = $image_post->post_excerpt;
+                    $image_description = $image_post->post_content;
+                    $image_properties['id'] = $image_id;
+                    $image_properties['url'] = $image_url;
+                    $image_properties['alt'] = $image_alt;
+                    $image_properties['caption'] = $image_caption;
+                    $image_properties['description'] = $image_description;
+                    return $image_properties;
+                }
+            }
+        ?>
 
-        <div class="portfolio-single modal fade" id="portfolio-car-rental" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
+        <?php while ( $portfolio_entry->fetch() ): ?>
+        <div class="portfolio-single modal fade" id="<?php echo $portfolio_entry->field('css_id'); ?>" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content bg-white">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="portfolioModalScrollable">Car Rental</h5>
+                        <h5 class="modal-title" id="portfolioModalScrollable"><?php echo $portfolio_entry->field('name'); ?></h5>
                         <button type="button" class="close text-muted" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -276,37 +131,16 @@
                                 <div class="row">
                                     <div class="col-12 col-md-10 offset-md-1">
                                         <div class="text-center">
-                                            <!-- <h2 class="text-dark mb-3">Car Rental<span class="base-color"></span></h2> -->
-                                            <p class="text-muted mb-3 text-left max-width-650">This is an example of dynamic selection which updates on-the-fly.</p>
-                                            <p class="text-muted mb-3 text-left max-width-650">
-                                                It shows a listing of cars, their image, location and rent price which you can hover over to see more details.&nbsp;
-                                                Those details include the listing&rsquo;s user and post date as well as the vehicle&rsquo;s features like navigation or heated seats.&nbsp;
-                                                You can filter the listings by typing in the search bar, by newest or oldest post date, or by the other available options such as price.
-                                            </p>
-                                            <p class="text-muted text-left max-width-650">This site was developed from scratch using front-end tools</p>
+                                        <?php foreach ( explode( "\n", $portfolio_entry->field('content') ) as $sentence ): ?>
+                                            <p class="text-muted mb-3 text-left max-width-650"><?php echo $sentence; ?></p>
+                                        <?php endforeach; ?>
                                         </div>
                                         <div class="row contact-info mt-5">
-                                            <!-- <div class="col-md-4">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6>Created by:</h6>
-                                                        <p class="text-muted mb-0">John Doe</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 p-title-border mt-3 mt-md-0">
-                                                <div class="text-center">
-                                                    <div>
-                                                        <h6 class="contact_detail-title">Completed on:</h6>
-                                                        <p class="text-muted mb-0">September 30, 2019</p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                             <div class="col-md-4 mt-3 mt-md-0">
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Live Demo:</h6>
-                                                        <p class="text-muted mb-0"><a href="/portfolio/car-rental">Car Rental</a></p>
+                                                        <p class="text-muted mb-0"><a href="<?php echo $portfolio_entry->field('live_demo_url'); ?>"><?php echo $portfolio_entry->field('live_demo_name'); ?></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -314,7 +148,7 @@
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Website Code:</h6>
-                                                        <p class="text-muted mb-0"><a href="https://github.com/carlos-io/portfolio-car-rental">Github</a></p>
+                                                        <p class="text-muted mb-0"><a href="<?php echo $portfolio_entry->field('code_repo_url'); ?>"><?php echo $portfolio_entry->field('code_repo_name'); ?></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -322,14 +156,17 @@
                                                 <div class="text-center">
                                                     <div>
                                                         <h6>Made with:</h6>
-                                                        <p class="text-muted mb-0">React / SCSS</p>
+                                                        <p class="text-muted mb-0"><?php echo strip_tags( get_the_term_list( $portfolio_entry->field('ID'), 'portfolio_technology', '', ' / ' ) ); ?></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mt-5">
                                             <div class="portfolio-single-item">
-                                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-large.jpg" class="d-block w-100 rounded" alt="...">
+                                            <?php $image_properties = get_post_featured_image( $portfolio_entry->field('ID'), 'portfolio-large' ); ?>
+                                            <?php if ( isset( $image_properties['url'] ) ): ?>
+                                                <img src="<?php echo $image_properties['url']; ?>" class="d-block w-100 rounded" alt="<?php echo $image_properties['alt']; ?>">
+                                            <?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="text-md-left mt-5">
@@ -344,6 +181,7 @@
                 </div>
             </div>
         </div>
+        <?php endwhile; ?>
 
         <!--  Page Pilling  Strat  -->
 		 <div id="pagepiling" class="pagepiling">
@@ -735,6 +573,14 @@
             <!--   Services End   -->
 
             <!--  Portfolio Start  -->
+            <?php
+                $term_list = [];
+                $portfolio_entry->reset();
+                while ( $portfolio_entry->fetch() ) {
+                    array_push( $term_list, ...explode( ",", strip_tags( get_the_term_list( $portfolio_entry->field('ID'), "portfolio_category", "", "," ) ) ) );
+                }
+                $term_list = array_unique($term_list);
+            ?>
             <section id="portfolio" class="section pp-scrollable portfolio bg-dark">
                 <div class="display-table">
                     <div class="display-content">
@@ -756,192 +602,41 @@
                                 <li class="list-inline-item">
                                     <a href="#" data-filter="*" class="active my-1">All</a>
                                 </li>
+                                <?php foreach ( $term_list as $term ): ?>
                                 <li class="list-inline-item">
-                                    <a href="#" data-filter=".design" class="my-1">Design</a>
+                                    <a href="#" data-filter=".<?php echo strtolower($term); ?>" class="my-1"><?php echo ucwords($term); ?></a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".development" class="my-1">Development</a>
-                                </li>
-                                <!-- <li class="list-inline-item">
-                                    <a href="#" data-filter=".email" class="my-1">Email</a>
-                                </li> -->
-                                <li class="list-inline-item">
-                                    <a href="#" data-filter=".graphic" class="my-1">Graphic</a>
-                                </li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                         <div class="portfolio-items mt-4 row">
-                            <!-- Item 01 -->
-                            <div class="col-lg-4 portfolio-item my-3 development frontend html sass javascript">
+                        <?php
+                            $portfolio_entry->reset();
+                            while ( $portfolio_entry->fetch() ):
+                                $image_properties = get_post_featured_image( $portfolio_entry->field('ID'), 'portfolio-thumbnail' );
+
+                                if ( isset( $image_properties['url'] ) ):
+                        ?>
+                            <div class="col-lg-4 portfolio-item my-3 <?php echo strtolower( strip_tags( get_the_term_list( $portfolio_entry->field('ID'), 'portfolio_category', '', ' ' ) ) ); ?>">
                                 <div class="portfolio-item-content rounded">
-                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-thumb.jpg" alt="/">
+                                    <img src="<?php echo $image_properties['url']; ?>" alt="<?php echo $image_properties['alt']; ?>">
                                     <div class="img-overlay text-center">
                                         <div class="img-overlay-content">
                                             <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-real-estate">
+                                                <button type="button" data-toggle="modal" data-target="#<?php echo $portfolio_entry->field('css_id'); ?>">
                                                     <i class="lni-link"></i>
                                                 </button>
-                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/real-estate-thumb.jpg" class="js-zoom-gallery">
+                                                <a href="<?php echo $image_properties['url']; ?>" class="js-zoom-gallery">
                                                     <i class="lni-search"></i>
                                                 </a>
                                             </div>
-                                            <h5 class="text-white mt-3 mb-0">Real Estate</h5>
+                                            <h5 class="text-white mt-3 mb-0"><?php echo $portfolio_entry->field('name'); ?></h5>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Item 02 -->
-                            <div class="col-lg-4 portfolio-item my-3 development frontend backend html sass bootstrap adonis database javascript jquery">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-thumb.jpg" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-inventory-management">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/inventory-management-thumb.jpg" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Inventory Management</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item 03 -->
-                            <div class="col-lg-4 portfolio-item my-3 development frontend sass javascript react">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-thumb.jpg" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-car-rental">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/car-rental-thumb.jpg" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Car Rental</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item 04 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 graphic">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="/assets/img/logo.png" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-carlos-io-logo">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="/assets/img/logo.png" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">Carlos.io Logo</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Item 05 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 mobiledesign seo">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="http://placehold.it/600x450" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-single">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="http://placehold.it/600x450" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">My Work</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Item 06 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 webdesign seo">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="http://placehold.it/600x450" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-single">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="http://placehold.it/600x450" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">My Work</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Item 07 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 mobiledesign">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="http://placehold.it/600x450" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-single">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="http://placehold.it/600x450" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">My Work</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Item 08 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 mobiledesign webdesign">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="http://placehold.it/600x450" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-single">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="http://placehold.it/600x450" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">My Work</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- Item 09 -->
-                            <!-- <div class="col-lg-4 portfolio-item my-3 mobiledesign webdesign">
-                                <div class="portfolio-item-content rounded">
-                                    <img src="http://placehold.it/600x450" alt="/">
-                                    <div class="img-overlay text-center">
-                                        <div class="img-overlay-content">
-                                            <div class="portfolio-icon">
-                                                <button type="button" data-toggle="modal" data-target="#portfolio-single">
-                                                    <i class="lni-link"></i>
-                                                </button>
-                                                <a href="http://placehold.it/600x450" class="js-zoom-gallery">
-                                                    <i class="lni-search"></i>
-                                                </a>
-                                            </div>
-                                            <h5 class="text-white mt-3 mb-0">My Work</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
+                            <?php endif; ?>
+                        <?php endwhile; ?>
                         </div>
                     </div>
                     </div>
