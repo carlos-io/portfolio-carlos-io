@@ -7,3 +7,4 @@ public/wp-content/themes/nill/public/assets/js/
 .htaccess
 wp-config.php
 plugins/
+uploads/
