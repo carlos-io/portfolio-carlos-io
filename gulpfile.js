@@ -28,8 +28,7 @@ function generateCSS() {
         .pipe(postcss([ autoprefixer(), cssnano() ]))
         // .pipe(rename({ extname: '.min.css' }))
         // .pipe(sourcemaps.write('.'))
-        .pipe(dest(`${basePath}/public/assets/css/`))
-        .pipe(browserSync.stream());
+        .pipe(dest(`${basePath}/public/assets/css/`));
 }
 
 
@@ -52,8 +51,7 @@ function generateJS() {
              }
         }, compiler)) */
         .pipe(uglify())
-        .pipe(dest(`${basePath}/public/assets/js/`))
-        .pipe(browserSync.stream());
+        .pipe(dest(`${basePath}/public/assets/js/`));
 }
 
 
