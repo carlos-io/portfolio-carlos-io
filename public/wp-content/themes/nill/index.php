@@ -559,6 +559,8 @@
 
             <!--  Portfolio Start  -->
             <?php
+                $portfolio = pods('portfolio');
+
                 $term_list = [];
                 $portfolio_entry->reset();
                 while ( $portfolio_entry->fetch() ) {
@@ -577,7 +579,9 @@
                             <div class="col-lg-12">
                                 <div class="text-left">
                                     <h2 class="text-dark">My <span class="base-color">Portfolio</span></h2>
-                                    <p class="text-muted mx-auto section-subtitle mt-3">Some examples of what I can do for you</p>
+                                    <?php if ( $portfolio->field('caption') ): ?>
+                                        <p class="text-muted mx-auto section-subtitle mt-3"><?php echo $portfolio->field('caption'); ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
