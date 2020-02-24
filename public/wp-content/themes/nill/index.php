@@ -787,6 +787,9 @@
             <!--   Blog End   -->
 
             <!--   Contact Start   -->
+            <?php
+                $contact = pods('contact');
+            ?>
             <section id="contact" class="section pp-scrollable contact bg-dark">
                 <div class="display-table">
                     <div class="display-content">
@@ -798,7 +801,9 @@
                             <div class="col-lg-12">
                                 <div class="text-left">
                                     <h2 class="text-dark">Get <span class="base-color">In Touch</span></h2>
-                                    <p class="text-muted mx-auto section-subtitle mt-3">How can I help you?</p>
+                                    <?php if ( $contact->field('caption') ): ?>
+                                        <p class="text-muted mx-auto section-subtitle mt-3"><?php echo $contact->field('caption'); ?></p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
