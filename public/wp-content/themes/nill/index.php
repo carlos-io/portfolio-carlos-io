@@ -514,8 +514,10 @@
 
             <!--   Services Start   -->
              <?php
-                $service = pods('service');
-                $service->find('weight ASC');
+                $services = pods('services');
+
+                $services_item = pods('services_item');
+                $services_item->find('weight ASC');
              ?>
             <section id="services" class="section pp-scrollable services bg-dark">
                 <div class="display-table">
@@ -528,20 +530,22 @@
                                 <div class="col-lg-12">
                                     <div class="text-left">
                                         <h2 class="text-dark mb-3">My <span class="base-color">Services</span></h2>
-                                        <!-- <p class="text-muted">Services I Offer To My Clients</p> -->
+                                        <?php if ( $services->field('caption') ): ?>
+                                            <p class="text-muted"><?php echo $services->field('caption'); ?></p>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mt-4">
-                            <?php while ( $service->fetch() ): ?>
+                            <?php while ( $services_item->fetch() ): ?>
                                 <div class="col-lg-4 text-left">
                                     <div class="services-item">
                                         <div class="float-left mt-lg-1 d-inline-block services-icon">
-                                            <i class="<?php echo $service->field('icon_class'); ?> size-md base-color"></i>
+                                            <i class="<?php echo $services_item->field('icon_class'); ?> size-md base-color"></i>
                                         </div>
                                         <div class="services-content">
-                                            <h5><?php echo $service->field('name'); ?></h5>
-                                            <p class="text-muted mt-3 mb-0"><?php echo $service->field('content'); ?></p>
+                                            <h5><?php echo $services_item->field('name'); ?></h5>
+                                            <p class="text-muted mt-3 mb-0"><?php echo $services_item->field('content'); ?></p>
                                         </div>
                                     </div>
                                 </div>
