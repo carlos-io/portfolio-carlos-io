@@ -327,6 +327,9 @@
             <!--    Hero End    -->
 
             <!--   About Start   -->
+            <?php
+                $about = pods('about');
+            ?>
             <section id="about" class="section pp-scrollable about text-dark bg-dark">
                 <div class="display-table">
                     <div class="display-content">
@@ -338,20 +341,16 @@
                         </div>
                         <div class="row mt-4">
                             <div class="col-sm-12 col-lg-4 text-center">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/0.jpg" alt="/" class="rounded img-thumbnail">
+                                <img src="<?php echo $about->field('image')['guid']; ?>" alt="/" class="rounded img-thumbnail">
                             </div>
                             <div class="col-sm-12 col-lg-8 personal-item  mb-4 mb-lg-0">
                                 <h2 class="text-dark mb-2">About <span class="base-color">Me</span></h2>
-                                <p class="text-dark">I&rsquo;m passionate about websites, and technology in general.</p>
-                                <p class="text-dark">
-                                    Similarly to how architecture is a cross of science and art, I enjoy putting together websites that are easy to use with pleasing designs.&nbsp;
-                                    Creating things that impact people gives me a sense of satisfaction that drives me to improve my skills day after day.
-                                </p>
-                                <p class="text-dark">I also enjoy reading books, meditation and researching the latest in longetivity.</p>
+                                <?php foreach ( explode( "\n", $about->field('content') ) as $paragraph ): ?>
+                                    <p class="text-dark"><?php echo $paragraph; ?></p>
+                                <?php endforeach; ?>
                                 <div class="row">
                                     <div class="col-12">
-                                        <!-- <a href="#contact" class="pill-button mt-3 mb-lg-0">Contact</a> -->
-                                        <!-- <a href="https://www.linkedin.com/in/carlos-v-30559991" class="pill-button mt-3 mb-lg-0 ml-2">Resume</a> -->
+                                        <a href="#contact" class="pill-button mt-3 mb-lg-0">Contact</a>
                                     </div>
                                 </div>
                             </div>
