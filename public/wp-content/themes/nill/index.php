@@ -251,17 +251,22 @@
              <!--    Overlay Menu End    -->
 
             <!--    Hero Start    -->
+            <?php
+                $top = pods('top_section');
+            ?>
             <section class="section pp-scrollable hero hero-01 bg-dark" id="hero">
-                <style>
-                    .hero-01 {
-                        background: -moz-linear-gradient(top,  rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 100%),
-                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
-                        background: -webkit-linear-gradient(top,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
-                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
-                        background: linear-gradient(to bottom,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
-                                    url("<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/4584.jpg") no-repeat center;
-                    }
-                </style>
+                <?php if ( $top->field('background_image') ): ?>
+                    <style>
+                        .hero-01 {
+                            background: -moz-linear-gradient(top,  rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 100%),
+                                        url("<?php echo $top->field('background_image')['guid']; ?>") no-repeat center;
+                            background: -webkit-linear-gradient(top,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
+                                        url("<?php echo $top->field('background_image')['guid']; ?>") no-repeat center;
+                            background: linear-gradient(to bottom,  rgba(255,255,255,0.4) 0%,rgba(255,255,255,0.4) 100%),
+                                        url("<?php echo $top->field('background_image')['guid']; ?>") no-repeat center;
+                        }
+                    </style>
+                <?php endif; ?>
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -271,11 +276,11 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-12">
                                     <div class="hero-content">
-                                        <h1 class="text-dark mb-3">Hi. I&rsquo;m Carlos</h1>
+                                        <h1 class="text-dark mb-3"><?php echo $top->field('opening_statement'); ?></h1>
                                         <h4 class="text-dark mb-0">
-                                            <span class="element"data-elements="A Web Developer.,A Web Designer.,A Graphic Designer.,A Problem Solver."></span>
+                                            <span class="element"data-elements="<?php echo $top->field('roles'); ?>"></span>
                                         </h4>
-                                        <p class="text-dark max-width-450 mx-0 my-4">Let&rsquo;s get in touch about your project&rsquo;s needs</p>
+                                        <p class="text-dark max-width-450 mx-0 my-4"><?php echo $top->field('caption'); ?></p>
                                         <div>
                                             <ul class="list-inline social-icon mt-2">
                                                 <!-- <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-facebook-filled text-dark"></i></a></li> -->
