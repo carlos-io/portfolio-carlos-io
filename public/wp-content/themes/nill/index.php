@@ -1,5 +1,19 @@
 <?php get_header(); ?>
-    <body <?php body_class('pilling-page nill-dark'); ?> data-spy="scroll" data-target="#scrollspy" data-offset="1">
+<?php
+    $color_scheme = pods('color_scheme');
+    $dark = $color_scheme->field('dark');
+
+    $body_classes = "pilling-page";
+    $bg_dark = "";
+
+    if ($dark) {
+        $body_classes .= " nill-dark";
+        $bg_dark = "bg-dark";
+    } else {
+        $body_classes .= " demo-01";
+    }
+?>
+    <body <?php body_class($body_classes); ?> data-spy="scroll" data-target="#scrollspy" data-offset="1">
 
         <!--  Pre Loader  -->
         <div id="overlayer">
@@ -254,7 +268,7 @@
             <?php
                 $top = pods('top_section');
             ?>
-            <section class="section pp-scrollable hero hero-01 bg-dark" id="hero">
+            <section class="section pp-scrollable hero hero-01 <?php echo $bg_dark; ?>" id="hero">
                 <?php if ( $top->field('background_image') ): ?>
                     <style>
                         .hero-01 {
@@ -335,7 +349,7 @@
             <?php
                 $about = pods('about');
             ?>
-            <section id="about" class="section pp-scrollable about text-dark bg-dark">
+            <section id="about" class="section pp-scrollable about text-dark <?php echo $bg_dark; ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -413,7 +427,7 @@
             <!--    About End    -->
 
              <!--   Resume Start   -->
-             <!-- <section id="resume" class="section pp-scrollable resume bg-dark">
+             <!-- <section id="resume" class="section pp-scrollable resume <?php echo $bg_dark; ?>">
                  <div class="display-table">
                      <div class="display-content">
                          <div class="container">
@@ -523,7 +537,7 @@
                 $services_item = pods('services_item');
                 $services_item->find('weight ASC');
              ?>
-            <section id="services" class="section pp-scrollable services bg-dark">
+            <section id="services" class="section pp-scrollable services <?php echo $bg_dark; ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -572,7 +586,7 @@
                 }
                 $term_list = array_unique($term_list);
             ?>
-            <section id="portfolio" class="section pp-scrollable portfolio bg-dark">
+            <section id="portfolio" class="section pp-scrollable portfolio <?php echo $bg_dark; ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -638,7 +652,7 @@
             <!--   Portfolio End   -->
 
             <!-- Testimonial Start -->
-            <!-- <section id="testimonial" class="section pp-scrollable testimonial text-center bg-dark">
+            <!-- <section id="testimonial" class="section pp-scrollable testimonial text-center <?php echo $bg_dark ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -698,7 +712,7 @@
             <!--  Testimonial End  -->
 
             <!--   Blog Start   -->
-            <!-- <section id="blog" class="section pp-scrollable blog bg-dark">
+            <!-- <section id="blog" class="section pp-scrollable blog <?php echo $bg_dark ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -794,7 +808,7 @@
             <?php
                 $contact = pods('contact');
             ?>
-            <section id="contact" class="section pp-scrollable contact bg-dark">
+            <section id="contact" class="section pp-scrollable contact <?php echo $bg_dark ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
