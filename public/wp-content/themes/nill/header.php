@@ -24,8 +24,8 @@
         <link rel="manifest" href="/site.webmanifest">
         <meta name="apple-mobile-web-app-title" content="Carlos.io">
         <meta name="application-name" content="Carlos.io">
-        <meta name="msapplication-TileColor" content="#363636">
-        <meta name="theme-color" content="#363636">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="theme-color" content="#333333">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:500,600,700" rel="stylesheet">

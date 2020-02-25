@@ -184,9 +184,8 @@
              <!--   Header Start -->
              <header>
                  <div class="logo-area">
-                     <a href="/" class="logo">
-                       <img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/logo.png" alt="" class="size-sm mb-0 pl-3 text-left">
-                       <span class="size-sm mb-0 font-weight-bold pl-3 text-dark text-left"></span>
+                     <a href="/" class="">
+                        <span class="size-xs mb-0 font-weight-bold pl-3 text-dark text-left">Carlos<span class="base-color">.io</span></span>
                      </a>
                  </div>
                  <div class="header-info-area">

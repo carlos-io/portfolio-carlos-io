@@ -6,7 +6,6 @@
                              <p class="text-dark">Footer</p>
                          </div>
                          <div class="text-center m-auto">
-                             <p class="text-dark size-sm logo" style="position: relative; left: -5px;"><img src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/img/logo.png"><span>arlos.io</span></p>
                              <ul class="list-inline socails">
                                  <!-- <li class="list-inline-item"><a class="text-white" href="#"><i class="lni-facebook-filled text-dark mr-2"></i></a></li>
                                  <li class="list-inline-item"><a class="text-white" href="#"><i class="lni-twitter-filled text-dark mr-2"></i></a></li> -->
@@ -46,7 +45,7 @@
                                     </svg>
                                 </a></li>
                              </ul>
-                             <p class="pl-3 text-dark">Copyright © 2020. Images sourced from <a href="https://www.freepik.com/free-photos-vectors/background" style="color: white;">freepik.com</a></p>
+                             <p class="pl-3 text-dark">Copyright © 2020 Carlos Velazquez. Images sourced from <a href="https://www.freepik.com/free-photos-vectors/background" style="color: unset;">freepik.com</a></p>
                          </div>
                      </div>
                  </div>
