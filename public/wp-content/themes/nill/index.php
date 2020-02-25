@@ -121,13 +121,13 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="pt-4 pb-5">
+                        <div class="pt-4">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12 col-md-10 offset-md-1">
                                         <div class="text-center">
                                         <?php foreach ( explode( "\n", $portfolio_entry->field('content') ) as $paragraph ): ?>
-                                            <p class="text-muted mb-3 text-left max-width-650"><?php echo $paragraph; ?></p>
+                                            <p class="text-muted mb-3 text-left max-width-700"><?php echo $paragraph; ?></p>
                                         <?php endforeach; ?>
                                         </div>
                                         <div class="row contact-info mt-5">
@@ -215,15 +215,15 @@
                                      <!-- <li class="list-group-item"><span><i class="lni-map-marker"></i> PA 19130, USA</span></li> -->
                                      <!-- <li class="list-group-item"><span><i class="lni-phone-handset"></i></span></li> -->
                                      <!-- <li class="list-group-item"><span><i class="lni-envelope"></i> contact@carlos.io</span></li> -->
-                                     <!-- <li class="list-group-item"><span>Follow me :</span></li>
+                                     <li class="list-group-item"><span>Follow me :</span></li>
                                      <li class="list-group-item">
                                          <ul class="list-inline socails">
                                              <li class="list-inline-item"><a href="https://www.linkedin.com/in/carlos-v-30559991"><i class="lni-linkedin-original"></i></a></li>
                                              <li class="list-inline-item"><a href="https://github.com/carlos-io"><i class="lni-github-original"></i></a></li>
                                              <li class="list-inline-item"><a href="https://sourcerer.io/carlos-io">
-                                                 <svg class="sourcerer" width="32px" height="40px" viewBox="0 0 32 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> -->
+                                                 <svg class="sourcerer" width="32px" height="40px" viewBox="0 0 32 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                      <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-                                                     <!-- <defs>
+                                                     <defs>
                                                          <polygon id="path-01" points="6.50557515 6.8668505 0.0122782746 6.8668505 0.0122782746 0.0647553409 6.50557515 0.0647553409 6.50557515 6.8668505"></polygon>
                                                          <polygon id="path-03" points="0 12.417702 0 0.000470332226 31.9731277 0.000470332226 31.9731277 12.417702 31.9731277 24.8349337 0 24.8349337 0 12.417702"></polygon>
                                                      </defs>
@@ -254,7 +254,7 @@
                                                  </svg>
                                              </a></li>
                                         </ul>
-                                     </li> -->
+                                     </li>
                                  </ul>
                              </div>
                          </div>
@@ -268,6 +268,7 @@
                 $top = pods('top_section');
             ?>
             <section class="section pp-scrollable hero hero-01 <?php echo $bg_dark; ?>" id="hero">
+                <div class="angle-quote">&rsaquo;</div>
                 <?php if ( $top->field('background_image') ): ?>
                     <style>
                         .hero-01 {
@@ -279,6 +280,8 @@
                                         url("<?php echo $top->field('background_image')['guid']; ?>") no-repeat center;
                         }
                     </style>
+                <?php else: ?>
+                    <canvas></canvas>
                 <?php endif; ?>
                 <div class="display-table">
                     <div class="display-content">
@@ -288,13 +291,12 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-lg-12">
-                                    <div class="hero-content">
+                                    <div class="hero-content text-center">
                                         <h1 class="text-dark mb-3"><?php echo $top->field('opening_statement'); ?></h1>
-                                        <h4 class="text-dark mb-0">
-                                            <span class="element"data-elements="<?php echo $top->field('roles'); ?>"></span>
-                                        </h4>
+                                        <h3 class="text-dark mb-0">
+                                            <span class="element" data-elements="<?php echo $top->field('roles'); ?>"></span>
+                                        </h3>
                                         <p class="text-dark max-width-450 mx-0 my-4"><?php echo $top->field('caption'); ?></p>
-                                        <div>
                                             <ul class="list-inline social-icon mt-2">
                                                 <!-- <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-facebook-filled text-dark"></i></a></li> -->
                                                 <!-- <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-twitter-filled text-dark"></i></a></li> -->
@@ -348,7 +350,7 @@
             <?php
                 $about = pods('about');
             ?>
-            <section id="about" class="section pp-scrollable about text-dark <?php echo $bg_dark; ?>">
+            <section id="about" class="section pp-scrollable about text-dark mt-5 <?php echo $bg_dark; ?>">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -357,18 +359,18 @@
                                 <p class="text-dark">About me</p>
                             </div>
                         </div>
+                        <h2 class="text-dark mb-2 text-center">About <span class="base-color">Me</span></h2>
                         <div class="row mt-4">
                             <div class="col-sm-12 col-lg-4 text-center">
-                                <img src="<?php echo $about->field('image')['guid']; ?>" alt="/" class="rounded img-thumbnail">
+                                <img src="<?php echo $about->field('image')['guid']; ?>" alt="/" class="round img-thumbnail">
                             </div>
                             <div class="col-sm-12 col-lg-8 personal-item  mb-4 mb-lg-0">
-                                <h2 class="text-dark mb-2">About <span class="base-color">Me</span></h2>
                                 <?php foreach ( explode( "\n", $about->field('content') ) as $paragraph ): ?>
                                     <p class="text-dark"><?php echo $paragraph; ?></p>
                                 <?php endforeach; ?>
                                 <div class="row">
                                     <div class="col-12">
-                                        <a href="#contact" class="pill-button mt-3 mb-lg-0">Contact</a>
+                                        <a href="#contact" class="pill-button mt-3 mb-lg-0">Send Message</a>
                                     </div>
                                 </div>
                             </div>
@@ -545,7 +547,7 @@
                                     <p class="text-dark">My Services</p>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="text-left">
+                                    <div class="text-center">
                                         <h2 class="text-dark mb-3">My <span class="base-color">Services</span></h2>
                                         <?php if ( $services->field('caption') ): ?>
                                             <p class="text-muted"><?php echo $services->field('caption'); ?></p>
@@ -594,7 +596,7 @@
                                 <p class="text-dark">Portfolio</p>
                             </div>
                             <div class="col-lg-12">
-                                <div class="text-left">
+                                <div class="text-center">
                                     <h2 class="text-dark">My <span class="base-color">Portfolio</span></h2>
                                     <?php if ( $portfolio->field('caption') ): ?>
                                         <p class="text-muted mx-auto section-subtitle mt-3"><?php echo $portfolio->field('caption'); ?></p>
@@ -604,7 +606,7 @@
                         </div>
                         <div class="row mt-4">
                             <!--   Portfolio Filters   -->
-                            <ul id="portfolio-filter" class="list-unstyled list-inline mb-0 col-lg-12 text-left portfolio-filter">
+                            <ul id="portfolio-filter" class="list-unstyled list-inline mb-0 col-lg-12 text-center portfolio-filter">
                                 <li class="list-inline-item">
                                     <a href="#" data-filter="*" class="active my-1">All</a>
                                 </li>
@@ -624,7 +626,7 @@
                                 if ( isset( $image_properties['url'] ) ):
                         ?>
                             <div class="col-lg-4 portfolio-item my-3 <?php echo strtolower( strip_tags( get_the_term_list( $portfolio_entry->field('ID'), 'portfolio_category', '', ' ' ) ) ); ?>">
-                                <div class="portfolio-item-content rounded">
+                                <div class="portfolio-item-content round">
                                     <img src="<?php echo $image_properties['url']; ?>" alt="<?php echo $image_properties['alt']; ?>">
                                     <div class="img-overlay text-center">
                                         <div class="img-overlay-content">
@@ -816,7 +818,7 @@
                                 <p class="text-dark">Get in Touch</p>
                             </div>
                             <div class="col-lg-12">
-                                <div class="text-left">
+                                <div class="text-center">
                                     <h2 class="text-dark">Get <span class="base-color">In Touch</span></h2>
                                     <?php if ( $contact->field('caption') ): ?>
                                         <p class="text-muted mx-auto section-subtitle mt-3"><?php echo $contact->field('caption'); ?></p>
@@ -884,4 +886,5 @@
             </section>
             <!--   Contact End   -->
 
+            <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/webgl-fluid-simulation.js"></script>
 <?php get_footer(); ?>

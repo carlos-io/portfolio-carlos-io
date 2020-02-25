@@ -25,10 +25,11 @@
         <meta name="apple-mobile-web-app-title" content="Carlos.io">
         <meta name="application-name" content="Carlos.io">
         <meta name="msapplication-TileColor" content="#2b5797">
-        <meta name="theme-color" content="#333333">
+        <meta name="theme-color" content="#ffffff">
 
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
 
         <!--  bootstrap Css  -->
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/bootstrap.css">

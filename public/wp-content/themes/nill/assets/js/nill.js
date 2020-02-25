@@ -133,13 +133,21 @@ function typedJS() {
 
     "use strict";
 
+    // greeting
+    $('.hero-content > h1').addClass('move-up fade-in');
+
     var options = {
         strings: $(".element").attr('data-elements').split(','),
-        // startDelay: 2300,
+        startDelay: 2800,
         typeSpeed: 100,
         backDelay: 3000,
         backSpeed: 50,
-        loop: true
+        showCursor: false,
+        loop: false,
+        onComplete: function(self) {
+            $('.hero .social-icon').addClass('fade-in');
+            $('.angle-quote').addClass('fade-in');
+        }
     };
     var typed = new Typed(".element", options);
 }

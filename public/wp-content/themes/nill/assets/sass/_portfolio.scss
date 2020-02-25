@@ -22,26 +22,31 @@
         }
     }
     .portfolio-item{
+        min-height: 240px;
+
         img {
             transition: all .5s ease;
         }
     }
     .portfolio-item-content{
         position: relative;
-        overflow: hidden;
+        // overflow: auto;
         &:hover{
             img{
-                transform: scale(1.2);
-                border-radius: $rd-r;
+                transform: scale(1.1);
+                border-radius: $rd-5;
             }
             .img-overlay{
                 opacity: 1;
                 visibility: visible;
-                border-radius: $rd-r;
+                transform: scale(1.1);
+                border-radius: $rd-5;
             }
         }
         img{
             width: 100%;
+            border-radius: $rd-r;
+            border: 3px solid $bg-light;
         }
     }
     .img-overlay{
@@ -109,9 +114,6 @@
         a {
             color: $base-color;
         }
-        a:hover {
-            color: $white;
-        }
     }
 }
 .max-width-450 {
@@ -120,5 +122,9 @@
 }
 .max-width-650 {
     max-width: 650px;
+    margin: 0 auto;
+}
+.max-width-700 {
+    max-width: 700px;
     margin: 0 auto;
 }
