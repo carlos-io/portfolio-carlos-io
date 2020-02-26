@@ -37,7 +37,7 @@ let config = {
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
     SPLAT_RADIUS: 0.25,
-    SPLAT_FORCE: 6000,
+    SPLAT_FORCE: 4000,
     SHADING: true,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
@@ -1378,12 +1378,16 @@ function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
         const color = generateColor();
         color.r *= 10.0;
-        color.g *= 10.0;
-        color.b *= 10.0;
-        const x = Math.random();
-        const y = Math.random();
-        const dx = 1000 * (Math.random() - 0.5);
-        const dy = 1000 * (Math.random() - 0.5);
+        color.g *= 3.0;
+        // color.b *= 10.0;
+        // const x = Math.random();
+        const x = 0.5;
+        // const y = Math.random();
+        const y = 0.8;
+        // const dx = 1000 * (Math.random() - 0.5);
+        const dx = 1000 * (0.5 - 0.5);
+        // const dy = 1000 * (Math.random() - 0.5);
+        const dy = 1000 * (0.0 - 0.5);
         splat(x, y, dx, dy, color);
     }
 }
@@ -1424,7 +1428,7 @@ canvas.addEventListener('mousedown', e => {
 
 canvas.addEventListener('mousemove', e => {
     let pointer = pointers[0];
-    if (!pointer.down) return;
+    // if (!pointer.down) return;
     let posX = scaleByPixelRatio(e.offsetX);
     let posY = scaleByPixelRatio(e.offsetY);
     updatePointerMoveData(pointer, posX, posY);

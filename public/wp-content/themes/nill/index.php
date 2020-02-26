@@ -268,7 +268,7 @@
                 $top = pods('top_section');
             ?>
             <section class="section pp-scrollable hero hero-01 <?php echo $bg_dark; ?>" id="hero">
-                <div class="angle-quote">&rsaquo;</div>
+                <a href="#about"><div class="angle-quote">&rsaquo;</div></a>
                 <?php if ( $top->field('background_image') ): ?>
                     <style>
                         .hero-01 {

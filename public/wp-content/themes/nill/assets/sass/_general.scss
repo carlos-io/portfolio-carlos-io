@@ -33,7 +33,7 @@
          GENERAL
 -------------------------*/
 body{
-    font-family: $muli;
+    font-family: $quicksand;
 }
 ::selection {
     background: $p-bg;
@@ -45,7 +45,7 @@ body{
     height: $fullScreen;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: $quicksand;
+    font-family: $muli;
     line-height: $line-height-base;
 }
 h4, h5, h6 {
@@ -146,5 +146,5 @@ a, button{
 .fade-in {
     visibility: visible !important;
     opacity: 1 !important;
-    transition: all 3s ease-out 0s, opacity 3s !important;
+    transition: all 2s ease-out 0s, opacity 3s !important;
 }

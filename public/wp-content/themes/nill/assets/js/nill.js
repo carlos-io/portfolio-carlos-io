@@ -134,7 +134,9 @@ function typedJS() {
     "use strict";
 
     // greeting
-    $('.hero-content > h1').addClass('move-up fade-in');
+    setInterval(() => {
+        $('.hero-content > h1').addClass('move-up fade-in');
+    }, 900);
 
     var options = {
         strings: $(".element").attr('data-elements').split(','),
