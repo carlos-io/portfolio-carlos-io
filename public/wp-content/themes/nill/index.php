@@ -296,7 +296,7 @@
                                         <h3 class="text-dark mb-0">
                                             <span class="element" data-elements="<?php echo $top->field('roles'); ?>"></span>
                                         </h3>
-                                        <p class="text-dark max-width-450 mx-0 my-4"><?php echo $top->field('caption'); ?></p>
+                                        <p class="text-dark mx-0 my-4"><?php echo $top->field('caption'); ?></p>
                                             <ul class="list-inline social-icon mt-2">
                                                 <!-- <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-facebook-filled text-dark"></i></a></li> -->
                                                 <!-- <li class="list-inline-item"><a href="javascript:void(0);"><i class="lni-twitter-filled text-dark"></i></a></li> -->

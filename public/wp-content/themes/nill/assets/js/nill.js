@@ -145,6 +145,7 @@ function typedJS() {
         showCursor: false,
         loop: false,
         onComplete: function(self) {
+            $('.hero p').addClass('fade-in');
             $('.hero .social-icon').addClass('fade-in');
             $('.angle-quote').addClass('fade-in');
         }
