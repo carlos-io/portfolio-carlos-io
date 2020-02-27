@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158618727-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-158618727-1');
-        </script>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
-        <meta name="description" content="Need a website? I can build you one.">
-        <meta name="keywords" content="web,frontend,backend,design,development,developer,html,css,html5,email,wordpress">
+        <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
         <meta name="author" content="Carlos Velazquez">
-        <title>Carlos Velazquez - Web Developer</title>
+        <title><?php echo get_bloginfo('name'); ?></title>
 
         <!--  FavIcon  -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -26,23 +16,6 @@
         <meta name="application-name" content="Carlos.io">
         <meta name="msapplication-TileColor" content="#2b5797">
         <meta name="theme-color" content="#ffffff">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
-
-        <!--  bootstrap Css  -->
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/bootstrap.css">
-        <!--  pagepiling Css  -->
-       <!--  <link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/jquery.pagepiling.css" /> -->
-        <!--  LineIcon Css  -->
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/LineIcons.css">
-        <!--  MagnificPopup Css  -->
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/magnific-popup.css">
-        <!--  OwlCarousel Css  -->
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/owl.carousel.min.css">
-        <!--  Custom Style CSS  -->
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/public/assets/css/style.css">
 
         <?php wp_head(); ?>
     </head>

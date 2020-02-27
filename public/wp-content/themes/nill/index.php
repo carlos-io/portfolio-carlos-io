@@ -1,17 +1,20 @@
-<?php get_header(); ?>
 <?php
-    $color_scheme = pods('color_scheme');
-    $dark = $color_scheme->field('dark');
+    function cio_index_styles_scripts() {
+        wp_enqueue_style('magnific');
+        wp_enqueue_style('owl-carousel');
 
-    $body_classes = "pilling-page";
-    $bg_dark = "";
-
-    if ($dark) {
-        $body_classes .= " nill-dark";
-        $bg_dark = "bg-dark";
-    } else {
-        $body_classes .= " demo-01";
+        wp_enqueue_script('webgl-fluid-simulation');
+        wp_enqueue_script('typedjs');
+        wp_enqueue_script('count-to');
+        wp_enqueue_script('isotope');
+        wp_enqueue_script('magnific');
+        wp_enqueue_script('owl-carousel');
+        wp_enqueue_script('nill');
     }
+
+    add_action('wp_enqueue_scripts', 'cio_index_styles_scripts');
+
+    get_header();
 ?>
     <body <?php body_class($body_classes); ?> data-spy="scroll" data-target="#scrollspy" data-offset="1">
 
@@ -108,9 +111,9 @@
         <?php
             $portfolio_entry = pods('portfolio_entry');
             $portfolio_entry->find('weight ASC');
-        ?>
 
-        <?php while ( $portfolio_entry->fetch() ): ?>
+            while ( $portfolio_entry->fetch() ):
+        ?>
         <div class="portfolio-single modal fade" id="<?php echo $portfolio_entry->field('css_id'); ?>" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content bg-white">
@@ -184,6 +187,7 @@
              <!--   Header Start -->
              <header>
                  <div class="logo-area">
+                     <a href="<?php site_url() ?>" class="">
                      <a href="/" class="">
                         <span class="size-xs mb-0 font-weight-bold pl-3 text-dark text-left">Carlos<span class="base-color">.io</span></span>
                      </a>
@@ -202,7 +206,7 @@
                          <div class="row">
                              <div class="col-lg-8 offset-lg-2 overlay-nav">
                                  <ul class="list-group text-left" id="myMenu">
-                                     <li data-menuanchor="hero" class="list-group-item"><a href="/">Home</a></li>
+                                     <li data-menuanchor="hero" class="list-group-item"><a href="<?php site_url() ?>">Home</a></li>
                                      <li data-menuanchor="about" class="list-group-item"><a href="#about">About me</a></li>
                                      <li data-menuanchor="services" class="list-group-item"><a href="#services">Services</a></li>
                                      <li data-menuanchor="portfolio" class="list-group-item"><a href="#portfolio">Portfolio</a></li>
@@ -267,7 +271,7 @@
             <?php
                 $top = pods('top_section');
             ?>
-            <section class="section pp-scrollable hero hero-01 <?php echo $bg_dark; ?>" id="hero">
+            <section class="section pp-scrollable hero hero-01" id="hero">
                 <a href="#about"><div class="angle-quote">&rsaquo;</div></a>
                 <?php if ( $top->field('background_image') ): ?>
                     <style>
@@ -350,7 +354,7 @@
             <?php
                 $about = pods('about');
             ?>
-            <section id="about" class="section pp-scrollable about text-dark mt-5 <?php echo $bg_dark; ?>">
+            <section id="about" class="section pp-scrollable about text-dark mt-5">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -428,7 +432,7 @@
             <!--    About End    -->
 
              <!--   Resume Start   -->
-             <!-- <section id="resume" class="section pp-scrollable resume <?php echo $bg_dark; ?>">
+             <section id="resume" class="section pp-scrollable resume">
                  <div class="display-table">
                      <div class="display-content">
                          <div class="container">
@@ -538,7 +542,7 @@
                 $services_item = pods('services_item');
                 $services_item->find('weight ASC');
              ?>
-            <section id="services" class="section pp-scrollable services <?php echo $bg_dark; ?>">
+            <section id="services" class="section pp-scrollable services">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -587,7 +591,7 @@
                 }
                 $term_list = array_unique($term_list);
             ?>
-            <section id="portfolio" class="section pp-scrollable portfolio <?php echo $bg_dark; ?>">
+            <section id="portfolio" class="section pp-scrollable portfolio">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -653,7 +657,7 @@
             <!--   Portfolio End   -->
 
             <!-- Testimonial Start -->
-            <!-- <section id="testimonial" class="section pp-scrollable testimonial text-center <?php echo $bg_dark ?>">
+            <!-- <section id="testimonial" class="section pp-scrollable testimonial text-center">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -713,7 +717,7 @@
             <!--  Testimonial End  -->
 
             <!--   Blog Start   -->
-            <!-- <section id="blog" class="section pp-scrollable blog <?php echo $bg_dark ?>">
+            <!-- <section id="blog" class="section pp-scrollable blog">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -809,7 +813,7 @@
             <?php
                 $contact = pods('contact');
             ?>
-            <section id="contact" class="section pp-scrollable contact <?php echo $bg_dark ?>">
+            <section id="contact" class="section pp-scrollable contact">
                 <div class="display-table">
                     <div class="display-content">
                         <div class="container">
@@ -885,6 +889,4 @@
                 </div>
             </section>
             <!--   Contact End   -->
-
-            <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/webgl-fluid-simulation.js"></script>
 <?php get_footer(); ?>

@@ -59,28 +59,6 @@
         </div>
         <!--  Page Pilling  End -->
 
-
-        <!--  JavaScripts  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery-3.4.1.min.js"></script>
-        <!--   Page Pilling Js     -->
-        <!-- <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.pagepiling.js"></script> -->
-        <!--  Bootstrap Js  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/bootstrap.js"></script>
-        <!--  Typed Js  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/typed.js"></script>
-        <!--  Count Js  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.countTo.js"></script>
-        <!--  Isotope Js  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/isotope.pkgd.min.js"></script>
-        <!--  Pop UP JS  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/jquery.magnific-popup.min.js"></script>
-        <!--  Owl carousel Js  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/owl.carousel.min.js"></script>
-        <!-- Map Js -->
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcmB207_E3E4SkA8jTA8FQjSWTop9YxZU"></script> -->
-        <!--  Custom JS  -->
-        <script src="<?php echo get_bloginfo('template_directory'); ?>/public/assets/js/nill.js"></script>
-
         <?php wp_footer(); ?>
         <?php if ( is_admin_bar_showing() ): ?>
             <style>
